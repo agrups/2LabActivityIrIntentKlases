@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">2 Lab ctivity Ir Intent Klases</string>
+    <string name="enterText">Įveskitę norimą tekstą</string>
+    <string name="countWords">Suskaičiuokite žodžius</string>
+    <string name="sendText">Siųsti tekstą</string>
+    <string name="enteredText">Įvestas tekstas</string>
+</resources>
