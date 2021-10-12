@@ -6,4 +6,5 @@
     <string name="enteredText">Įvestas tekstas</string>
     <string name="save">Saugoti</string>
     <string name="yourText">Jūsų tekstas</string>
+    <string name="finalText">Jūsų įvestame tekste: %1$s "" yra %2$d žodžių</string>
 </resources>

@@ -30,11 +30,18 @@ public class EnterTextWindow extends AppCompatActivity {
         });
     }
 
-    public void returnResult(View w){
+    private void returnResult(View v) {
         String enteredText = enterTextField.getText().toString();
-        Intent returnIntent = new Intent();
-        returnIntent.putExtra("enteredText", enteredText);
-        setResult(Activity.RESULT_OK, returnIntent);
-        finish();
+        Intent mainWindow = new Intent(EnterTextWindow.this, MainActivity.class);
+        mainWindow.putExtra("data", enteredText);
+        startActivity(mainWindow);
     }
+
+//    public void returnResult(View w){
+//        String enteredText = enterTextField.getText().toString();
+//        Intent returnIntent = new Intent();
+//        returnIntent.putExtra("enteredText", enteredText);
+//        setResult(Activity.RESULT_OK, returnIntent);
+//        finish();
+//    }
 }

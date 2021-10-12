@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button countWordsButton;
     Button sendTextButton;
     TextView enteredText;
+    String data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Intent currentIntent = this.getIntent();
+        data = (String) currentIntent.getSerializableExtra("data");
 
         enterTextButton = findViewById(R.id.enterTextButton);
         countWordsButton = findViewById(R.id.countWordsButton);
         sendTextButton = findViewById(R.id.sendTextButton);
         enteredText = findViewById(R.id.text);
+
+        if(data != null){
+            enteredText.setText(data);
+        }
 
         enterTextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void openCountWordsWindow(View v) {
         Intent openCountWordsWindow = new Intent(MainActivity.this, OpenCountWordsWindow.class);
+        openCountWordsWindow.putExtra("data", data);
         startActivity(openCountWordsWindow);
     }
 
