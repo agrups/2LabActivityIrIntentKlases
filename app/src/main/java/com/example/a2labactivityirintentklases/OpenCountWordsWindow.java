@@ -27,7 +27,6 @@ public class OpenCountWordsWindow extends AppCompatActivity {
             String[] words = data.split("\\s+");
             wordCount = words.length;
 
-            //String finalText = "Jūsų įvestame tekste " + data + " yra " + wordCount + " žodžių";
             text.setText(getString(R.string.finalText, data, wordCount));
         }
     }
